@@ -1,4 +1,10 @@
 body {
     background-color: aquamarine;
     text-align: justify;
+    color: cornflowerblue;
+    text-shadow: black;
+}
+
+h1 {
+    color: crimson;
 }
