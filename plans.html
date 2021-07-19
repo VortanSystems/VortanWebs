@@ -8,94 +8,118 @@
     <title>Vortan Systems</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom styles for this template -->
-    <link href="../css/style.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/carousel.css" rel="stylesheet">
+    <!-- Custom styles for this page -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/nav.css" rel="stylesheet">
 </head>
 
 
 <body class="d-flex h-100 text-center bg-dark text-white">
     <div class=" container ">
-        <header class="navbar ">
-            <h1 class="float-md-start mb-0 ">Vortan Systems</h1>
-            <nav class="nav nav-masthead justify-content-center float-md-end ">
-                <a class="nav-link active " aria-current="page " href="index.html ">Home</a>
-                <a class="nav-link active " href="services.html ">Services</a>
-                <a class="nav-link active " href="about.html ">About</a>
-                <a class="nav-link active " href="contact.html ">Contact</a>
-            </nav>
-        </header>
-        <main class="px-6 ">
-            <h3>Web Development & Hosting</h3>
-            <p class="lead ">Our Web development and hosting service has four packages you can choose from to your convenience.</p>
-            <div class="row row-cols-1 row-cols-md-3 g-4 ">
-                <div class="col ">
-                    <div class="card h-100 ">
-                        <img src="../images/artificial-intelligence-blur-close-up-546819.jpg " class="card-img-top " alt="Software-dev ">
-                        <div class="card-body ">
-                            <h5 class="card-title ">Software Development</h5>
-                            <p class="card-text ">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <a href="# " class="btn btn-primary ">Order</a>
+        <nav class="navbar custom-navbar navbar-expand-lg navbar-light navbar-fixed-top bg-white">
+            <div class="container">
+                <img id="logo" src="assets/vortan systems svg embeded.svg" style="width: 80px; height:100px;" />
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="about.html" tabindex="-1">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="contact.html" tabindex="-1">Contact</a>
+                        </li>
+                    </ul>
+
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+
+                </div>
+            </div>
+        </nav>
+        <main class="container">
+            <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+                <h1 class="display-4">Pricing</h1>
+                <p class="lead">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization.</p>
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+                <div class="col">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header">
+                            <h4 class="my-0 fw-normal">Free</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>10 users included</li>
+                                <li>2 GB of storage</li>
+                                <li>Email support</li>
+                                <li>Help center access</li>
+                            </ul>
+                            <button type="button" class="w-100 btn btn-lg btn-primary">Sign up for free</button>
                         </div>
                     </div>
                 </div>
-                <div class="col ">
-                    <div class="card h-100 ">
-                        <img src="../images/artificial-intelligence-blur-close-up-546819.jpg " class="card-img-top " alt="Digital-Marketing ">
-                        <div class="card-body ">
-                            <h5 class="card-title ">Digital Marketing</h5>
-                            <p class="card-text ">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <a href="# " class="btn btn-primary ">Order</a>
+                <div class="col">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header">
+                            <h4 class="my-0 fw-normal">Pro</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>20 users included</li>
+                                <li>10 GB of storage</li>
+                                <li>Priority email support</li>
+                                <li>Help center access</li>
+                            </ul>
+                            <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
                         </div>
                     </div>
                 </div>
-                <div class="col ">
-                    <div class="card h-100 ">
-                        <img src="../images/artificial-intelligence-blur-close-up-546819.jpg " class="card-img-top " alt="Web-Development ">
-                        <div class="card-body ">
-                            <h5 class="card-title ">Web development</h5>
-                            <p class="card-text ">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <a href="# " class="btn btn-primary ">Order</a>
+                <div class="col">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header">
+                            <h4 class="my-0 fw-normal">Enterprise</h4>
                         </div>
-                    </div>
-                </div>
-                <div class="col ">
-                    <div class="card h-100 ">
-                        <img src="../images/artificial-intelligence-blur-close-up-546819.jpg " class="card-img-top " alt="Software-dev ">
-                        <div class="card-body ">
-                            <h5 class="card-title ">Consultation services</h5>
-                            <p class="card-text ">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <a href="# " class="btn btn-primary ">Order</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col ">
-                    <div class="card h-100 ">
-                        <img src="../images/artificial-intelligence-blur-close-up-546819.jpg " class="card-img-top " alt="Digital-Marketing ">
-                        <div class="card-body ">
-                            <h5 class="card-title ">UI/UX Design</h5>
-                            <p class="card-text ">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <a href="# " class="btn btn-primary ">Order</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col ">
-                    <div class="card h-100 ">
-                        <img src="../images/artificial-intelligence-blur-close-up-546819.jpg " class="card-img-top " alt="Web-Development ">
-                        <div class="card-body ">
-                            <h5 class="card-title ">Web development</h5>
-                            <p class="card-text ">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <a href="# " class="btn btn-primary ">Order</a>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">$29 <small class="text-muted">/ mo</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>30 users included</li>
+                                <li>15 GB of storage</li>
+                                <li>Phone and email support</li>
+                                <li>Help center access</li>
+                            </ul>
+                            <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <footer class="my-5 pt-5 text-muted text-center text-small">
+                <p class="mb-1">&copy; 2021 Vortan Systems.</p>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="#">Privacy</a></li>
+                    <li class="list-inline-item"><a href="#">Terms</a></li>
+                    <li class="list-inline-item"><a href="#">Support</a></li>
+                </ul>
+            </footer>
         </main>
-        <p></p>
-        <footer class="mt-auto text-white-50 navbar-dark ">
-            <p> Vortan Systems is a member of <a href="# " class="text-white "> Vortan Foundation.</a>.</p>
-        </footer>
-    </div>
+
+        <script src="assets/js/bootstrap.bundle.min.js "></script>
 </body>
 
 </html>
