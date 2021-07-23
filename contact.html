@@ -52,17 +52,17 @@
         <main class="container">
             <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
                 <h1 class="display-4">Contact form</h1>
-                <p class=" lead ">Fill in this form with your information to make inquiries, complaints, send compliments or get quotations.</p>
+                <p class="lead">Fill in this form with your information to make inquiries, complaints, send compliments or get quotations.</p>
             </div>
 
-            <article id="contact ">
-                <div class="p-4 mb-3 bg-dark text-light rounded ">
-                    <h4 class="mb-3 ">Personal Info</h4>
-                    <form class="needs-validation " netlify novalidate>
+            <article id="contact" class="d-flex">
+                <div class="col-md-2"></div>
+                <div class="p-4 mb-2 bg-white text-dark">
+                    <form action="# " method="POST " class="col-md-10 col-sm-12 " class="needs-validation " netlify>
                         <div class="row g-3 ">
                             <div class="col-sm-6 ">
                                 <label for="firstName " class="form-label ">First name</label>
-                                <input type="text " class="form-control " id="firstName " placeholder=" " value=" " required>
+                                <input type="text " class="form-control " id="firstName " placeholder="first name" required>
                                 <div class="invalid-feedback ">
                                     Valid first name is required.
                                 </div>
@@ -70,7 +70,7 @@
 
                             <div class="col-sm-6 ">
                                 <label for="lastName " class="form-label ">Last name</label>
-                                <input type="text " class="form-control " id="lastName " placeholder=" " value=" " required>
+                                <input type="text " class="form-control " id="lastName " placeholder="last name" required>
                                 <div class="invalid-feedback ">
                                     Valid last name is required.
                                 </div>
@@ -85,7 +85,7 @@
                             </div>
                             <div class="col-12 ">
                                 <label for="telephone " class="form-label ">Phone number</label>
-                                <input type="telephone " class="form-control " id="phone " placeholder="(+256)752330715 ">
+                                <input type="telephone " class="form-control " id="phone " placeholder="(+256)700123415 ">
                                 <div class="invalid-feedback ">
                                     Please enter a valid Phone number.
                                 </div>
@@ -98,17 +98,18 @@
                                     Please fill in the text field.
                                 </div>
                             </div>
-                            <hr class="my-4 ">
-                            <div><button class="btn btn-md btn-secondary fw-bold border-white " type="submit ">Submit</button></div>
+                            <hr class="my-4 text-center ">
+                            <div><button class="btn btn-md btn-primary fw-bold border-white " type="submit ">Submit</button></div>
                         </div>
                     </form>
+                    <div class="col-md-2"></div>
             </article>
 
             <footer class="my-5 pt-5 text-muted text-center text-small ">
                 <p class="mb-1 ">&copy; 2021 Vortan Systems</p>
                 <ul class="list-inline ">
                     <li class="list-inline-item "><a href="# ">Privacy</a></li>
-                    <li class="list-inline-item "><a href="# ">Terms</a></li>
+                    <li class="list-inline-item "><a href="# ">Careers</a></li>
                     <li class="list-inline-item "><a href="# ">Support</a></li>
                 </ul>
             </footer>
