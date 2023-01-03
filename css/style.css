@@ -32,10 +32,6 @@
     padding: 40px 40px;
     position: relative;
 }
-*{
-    outline: 1px solid rgb(37, 110, 219);
-}
-
 .form button {
     background-color: #8e44ad;
     border: 2px solid #8e44ad;
@@ -47,3 +43,7 @@
     padding:50px;
     width: 100%;
 }
+/*{
+    outline: 1px dotted rgb(37, 110, 219);
+}
+
