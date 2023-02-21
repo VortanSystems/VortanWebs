@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Vortan Systems | Contact</title>
     <meta content="Build websites faster with the power of the resources and themes from Vortan Systems." name="description" />
     <meta content="Vortan Systems | Build websites faster" property="og:title" />
@@ -13,27 +12,30 @@
     <meta property="og:type" content="website" />
     <meta content="summary_large_image" name="twitter:card" />
     <meta content="https://uploads-ssl.webflow.com/5ea1b995c6b4c10f74406a08/5ea1f11934a4540f7b574e9f_product-shot.png" property="og:image" />
-    <meta content="https://uploads-ssl.webflow.com/5ea1b995c6b4c10f74406a08/5ea1f11934a4540f7b574e9f_product-shot.png" property="twitter:image" />
-
-    <!-- Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,900&display=swap" rel="stylesheet">
-
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <meta content="https://uploads-ssl.webflow.com/5e    a1b995c6b4c10f74406a08/5ea1f11934a4540f7b574e9f_product-shot.png" property="twitter:image" />
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="images/vortan systems svg embeded.svg" type="image/svg" />
+    <link href="images/webclip.png" rel="apple-touch-icon" />
+
+    <!-- Bootstrap core CSS -->
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta content="Webflow" name="generator" />
     <link href="css/normalize.css" rel="stylesheet" type="text/css" />
-
     <link href="css/webflow.css" rel="stylesheet" type="text/css" />
-
     <link href="css/lander-409e35.webflow.css" rel="stylesheet" type="text/css" />
-
     <link href="css/theme-indigo.css" rel="stylesheet" type="text/css" />
+    <link href="css/form-validation.css" rel="stylesheet" type="text/css" />
+    <!-- Custom styles for this page 
+    
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/carousel.css" rel="stylesheet">
+ <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/nav.css" rel="stylesheet">    
+    -->
+
+
 
     <!--  [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif]  -->
     <script type="text/javascript">
@@ -48,16 +50,11 @@
     </script>
     <script src="https://unpkg.com/feather-icons">
     </script>
-
-
-
-    <!-- Custom styles for the contact page
-    <link href="css/form-validation.css" rel="stylesheet">
-    <link href="css/carousel.css" rel="stylesheet">
-    -->
-
-
 </head>
+
+<!-- Messenger Chat Plugin Code -->
+<div id="fb-root"></div>
+
 <!-- Your Chat Plugin code -->
 <div id="fb-customer-chat" class="fb-customerchat">
 </div>
@@ -92,7 +89,7 @@
                     <a aria-current="page" class="w-inline-block w--current">
                         <div class="logo">
                             <img src="custom/vortan systems svg embeded.svg" class="logo mr-md" />
-                            <span>Vortan Systems</span>
+                            <a href="index.html"> <span>Vortan Systems</span></a>
                         </div>
                     </a>
                 </div>
@@ -101,76 +98,80 @@
                         <a class="u mr-lg" href="services.html">Pricing</a>
                         <a class="u mr-lg" href="about.html">About</a>
                         <a class="u mr-lg" aria-current="page" href="contact.html">Contact</a>
+                        <a href="/login" class="u mr-lg">Log In</a>
                     </div>
                 </div>
-            </div>
-    </header>
-    <div class="section overflow-hidden">
-        <div class="container mt-3xl mb-3xl ">
-            <div class="row">
-                <div class="column align-justify">
+                <div class="row ">
 
-                    <h1 class="display-4 text-center">Contact form</h1>
-                    <p class="lead text-center">Fill in this form with your information to make inquiries, complaints, send compliments or get quotations.</p>
+                    <a href="/signup" class="button main w-button">Sign Up
+                            <span data-feather="arrow-right" class="icon mr-md-n ml-md">•
+                            </span></a>
                 </div>
-
-                <article id="contact " class="align-center">
-                    <div class="col-md-2 "></div>
-                    <div class="p-4 mb-2 bg-white text-dark align-center">
-                        <form action="# " method="POST " class="align-center " class="needs-validation " netlify>
-                            <div class="row g-3 ">
-                                <div class="col-sm-6 ">
-                                    <label for="firstName " class="form-label ">First name</label>
-                                    <input type="text " class="form-control " id="firstName " placeholder="first name " required>
-                                    <div class="invalid-feedback ">
-                                        Valid first name is required.
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6 ">
-                                    <label for="lastName " class="form-label ">Last name</label>
-                                    <input type="text " class="form-control " id="lastName " placeholder="last name " required>
-                                    <div class="invalid-feedback ">
-                                        Valid last name is required.
-                                    </div>
-                                </div>
-
-                                <div class="col-12 ">
-                                    <label for="email " class="form-label ">Email</label>
-                                    <input type="email " class="form-control " id="email " placeholder="you@example.com ">
-                                    <div class="invalid-feedback ">
-                                        Please enter a valid email address.
-                                    </div>
-                                </div>
-                                <div class="col-12 ">
-                                    <label for="telephone " class="form-label ">Phone number</label>
-                                    <input type="telephone " class="form-control " id="phone " placeholder="(+256)700123415 ">
-                                    <div class="invalid-feedback ">
-                                        Please enter a valid Phone number.
-                                    </div>
-                                </div>
-
-                                <div class="col-md-12 col-sm-12 ">
-                                    <label for="message " class="form-label ">Message</label>
-                                    <textarea name="message " class="form-control " placeholder="Your message "></textarea>
-                                    <div class="invalid-feedback ">
-                                        Please fill in the text field.
-                                    </div>
-                                </div>
-                                <hr class="my-4 text-center ">
-                                <div><button class="btn btn-md btn-primary fw-bold border-white " type="submit ">Send
-                                    Message</button></div>
-                            </div>
-                        </form>
-                        <div class="col-md-2 "></div>
-                </article>
-                </div>
-            </div>
-            <div class="circle">
             </div>
         </div>
+    </header>
+    <div class="section ">
+        <div class="container mt-3xl mb-3xl ">
+            <div class="row">
+                <div class="column align-center">
+                    <h1 class="test-giga text-center">Contact form</h1>
+                    <p class="text-lg text-center max-w-lg">Fill in this form with your information to make inquiries, complaints, send compliments or get quotations.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <form action="# " method="POST " class="row items-center mt-lg _w-full max-w-lg wrap justify-center " class="needs-validation " sizes="(max-width: 479px) 93vw, (max-width: 767px) 94vw, 720px" data-w-id="a4177896-a5e5-6c6a-0980-01ce8ea2054a" style="xopacity: 0;"
+                alt="" class="product-shot" netlify>
+                <div class="row g-3 ">
+                    <div class="col-sm-6 ">
+                        <label for="firstName " class="form-label ">First name</label>
+                        <input type="text " class="form-control " id="firstName " placeholder="first name " required>
+                        <div class="invalid-feedback ">
+                            Valid first name is required.
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 ">
+                        <label for="lastName " class="form-label ">Last name</label>
+                        <input type="text " class="form-control " id="lastName " placeholder="last name " required>
+                        <div class="invalid-feedback ">
+                            Valid last name is required.
+                        </div>
+                    </div>
+
+                    <div class="col-12 ">
+                        <label for="email " class="form-label ">Email</label>
+                        <input type="email " class="form-control " id="email " placeholder="you@example.com ">
+                        <div class="invalid-feedback ">
+                            Please enter a valid email address.
+                        </div>
+                    </div>
+                    <div class="col-12 ">
+                        <label for="telephone " class="form-label ">Phone number</label>
+                        <input type="telephone " class="form-control " id="phone " placeholder="(+256)700123415 ">
+                        <div class="invalid-feedback ">
+                            Please enter a valid Phone number.
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 col-sm-12 ">
+                        <label for="message " class="form-label ">Message</label>
+                        <textarea name="message " class="form-control " placeholder="Your message "></textarea>
+                        <div class="invalid-feedback ">
+                            Please fill in the text field.
+                        </div>
+                    </div>
+                    <hr class="my-4 text-center ">
+                    <div><button class="button main w-button" type="submit ">Send</button></div>
+                </div>
+            </form>
+        </div>
     </div>
-    </main>
+
+    </div>
+    </div>
+    </div>
 
     <div class="section pb-2xl-m ">
         <div class="container mt-2xl mb-2xl ">
@@ -246,10 +247,14 @@
             </div>
         </div>
     </div>
-
     <script src="js/bootstrap.bundle.min.js "></script>
     <script src="js/form-validation.js "></script>
-    </div>
+    <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js?site=5ea1b995c6b4c10f74406a08" type="text/javascript" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+    </script>
+    <!--  [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]  -->
+    <script>
+        feather.replace();
+    </script>
 </body>
 
 </html>
