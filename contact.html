@@ -115,51 +115,27 @@
     </div>
 
     <main>
-        <form name="contact " method="POST " sizes="(max-width: 479px) 93vw, (max-width: 767px) 94vw, 720px " data-w-id="a4177896-a5e5-6c6a-0980-01ce8ea2054a " data-netlify="true ">
+        <form name="contact" method="POST" data-netlify="true">
             <div>
-                <label for="name " class="large-label ">Name:</label>
-                <label for="firstName " class="form-label ">First name</label>
-                <input type="text " id="firstName " placeholder="First name " required>
-                <label for="firstName " class="form-label ">Last name</label>
-                <input type="text " id="lastName " placeholder="Last name " required />
-
-            </div>
-            <div>
-                <label for=" email " class="large-label ">Contacts:</label>
-                <label for="email " class="form-label ">Email</label>
-                <input type="email " id="email " placeholder="you@example.com ">
-                <label for="telephone " class="form-label ">Phone number</label>
-                <input type="telephone " id="phone " placeholder="(+256)700123415 ">
-            </div>
-            <!--
-                <div>
-                <label for="comp " class="small-label ">Do you need a service?</label>
-                <fieldset>
-                    <select type="radio " name="grid " id="service " value=" ">
-                        <option id="yes " value="yes ">Yes</option>
-                        <option id="no " value="no ">No</option>
-                    </select>
-                </fieldset>
+                <label for="name" class="large-label">Name:</label>
+                <label for="firstName" class="form-label">First name</label>
+                <input type="text" id="firstName" placeholder="First name" required>
+                <label for="lastName" class="form-label">Last name</label>
+                <input type="text" id="lastName" placeholder="Last name" required>
             </div>
             <div>
-                <label for="comp " class="small-label " id="serviceName">If yes, select a service</label>
-                <select id="comp ">
-                    <option>Web development</option>
-                    <option>Tech consultancy</option>
-                    <option>SEO optimization</option>
-                    <option>Other</option>
-                    <option value="other ">Other</option>
-                </select>
+                <label for="email" class="large-label">Contacts:</label>
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" placeholder="you@example.com">
+                <label for="phone" class="form-label">Phone number</label>
+                <input type="tel" id="phone" placeholder="(+256)700123415">
             </div>
-
-            -->
-
-            <div class="full-width ">
-                <label for="message " class="large-label ">Your Message</label>
-                <textarea id="message" placeholder="Leave a message… "></textarea>
+            <div class="full-width">
+                <label for="message" class="large-label">Your Message</label>
+                <textarea id="message" placeholder="Leave a message…"></textarea>
             </div>
-            <div text-center>
-                <button class="u mr-lg button " type="submit " value="Send message ">Send Message</button>
+            <div class="text-center">
+                <button class="u mr-lg button" type="submit" value="Send message">Send Message</button>
             </div>
         </form>
     </main>
@@ -239,32 +215,30 @@
         </div>
     </div>
     <script>
-        var thisForm = document.getElementById("contact");
-        const headers_ = {
+        const headers = {
             'Authorization': 'Bearer <keygsagaBWhnmu35Z>',
             'Content-Type': 'application/json'
         };
-        // When the form is submitted...
-        thisForm.addEventListener("submit", function(event) {
-            event.preventDefault();
-            // POST the data
-            axios.post("https://api.airtable.com/v0/appAmoubBHCzWt1rf/Contact%20Form", {
-                    "records": {
-                        "First Name": document.getElementById("firstName").value,
-                        "Last Name": document.getElementById("lastName").value,
-                        "Email Address": document.getElementById("email").value,
-                        "Phone number": document.getElementById("phone").value,
-                        "Message": document.getElementById("message").value
-                    }
-                }, {
-                    headers: headers_
-                })
-                .then((resp) => {
-                    console.log("success!")
-                })
-                .catch(function(error) {
-                    console.log(error);
+
+        document.getElementById("contact").addEventListener("submit", async(event) => {
+            const data = {
+                "records": {
+                    "First Name": document.getElementById("firstName").value,
+                    "Last Name": document.getElementById("lastName").value,
+                    "Email Address": document.getElementById("email").value,
+                    "Phone number": document.getElementById("phone").value,
+                    "Message": document.getElementById("message").value
+                }
+            };
+
+            try {
+                const response = await axios.post("https://api.airtable.com/v0/appAmoubBHCzWt1rf/Contact%20Form", data, {
+                    headers: headers
                 });
+                console.log("success!");
+            } catch (error) {
+                console.log(error);
+            }
         });
     </script>
     <script src="js/bootstrap.bundle.min.js "></script>
