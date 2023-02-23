@@ -139,7 +139,7 @@
         
         button:focus {
             outline: none;
-            box-shadow: 0 0 0 4px black;
+            box-shadow: 0 0 0 1px rgba(13, 148, 232, 0.916);
         }
         
         button[type="submit"] {
@@ -181,13 +181,14 @@
     </script>
     <script src="https://unpkg.com/feather-icons">
     </script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
 <!-- Messenger Chat Plugin Code -->
-<div id="fb-root"></div>
+<div id="fb-root "></div>
 
 <!-- Your Chat Plugin code -->
-<div id="fb-customer-chat" class="fb-customerchat">
+<div id="fb-customer-chat " class="fb-customerchat ">
 </div>
 <script>
     const handleSubmit = (event) => {
@@ -196,26 +197,26 @@
         const myForm = event.target;
         const formData = new FormData(myForm);
 
-        fetch("https://vortansystems.netlify.app", {
-                method: "POST",
+        fetch("https://vortansystems.netlify.app ", {
+                method: "POST ",
                 headers: {
-                    "Content-Type": "application/x-www-form-urlencoded"
+                    "Content-Type ": "application/x-www-form-urlencoded "
                 },
                 body: new URLSearchParams(formData).toString(),
             })
-            .then(() => alert("Thank you for your message, we have received it and will be in touch shortly."))
+            .then(() => alert("Thank you for your message, we have received it and will be in touch shortly. "))
             .catch((error) => alert(error));
     };
 
     document
-        .querySelector("form")
-        .addEventListener("submit", handleSubmit);
+        .querySelector("form ")
+        .addEventListener("submit ", handleSubmit);
 </script>
 
 <script>
     var chatbox = document.getElementById('fb-customer-chat');
-    chatbox.setAttribute("page_id", "2282402771794537");
-    chatbox.setAttribute("attribution", "biz_inbox");
+    chatbox.setAttribute("page_id ", "2282402771794537 ");
+    chatbox.setAttribute("attribution ", "biz_inbox ");
 
     window.fbAsyncInit = function() {
         FB.init({
@@ -234,7 +235,7 @@
     }(document, 'script', 'facebook-jssdk'));
 </script>
 
-<body style="margin: 0; background-color: hsl(0, 0%, 98%); color: #333;">
+<body style="margin: 0; background-color: hsl(0, 0%, 98%); color: #333; ">
     <header class=" nav ">
         <div class="container ">
             <div class="row items-center mb-lg ">
@@ -275,13 +276,13 @@
     </div>
 
     <main>
-        <form name="contact" action="https://vortansystems.netlify.app" method="POST " sizes="(max-width: 479px) 93vw, (max-width: 767px) 94vw, 720px " data-w-id="a4177896-a5e5-6c6a-0980-01ce8ea2054a " data-netlify="true">
+        <form name="contact " action="https://vortansystems.netlify.app " method="POST " sizes="(max-width: 479px) 93vw, (max-width: 767px) 94vw, 720px " data-w-id="a4177896-a5e5-6c6a-0980-01ce8ea2054a " data-netlify="true ">
             <div>
-                <label for="name " class="large-label">Name:</label>
-                <label for="firstName " class="form-label">First name</label>
-                <input type="text " placeholder="First name " required>
-                <label for="firstName " class="form-label">Last name</label>
-                <input type="text " placeholder="Last name " required />
+                <label for="name " class="large-label ">Name:</label>
+                <label for="firstName " class="form-label ">First name</label>
+                <input type="text " id="firstName " placeholder="First name " required>
+                <label for="firstName " class="form-label ">Last name</label>
+                <input type="text " id="lastName " placeholder="Last name " required />
 
             </div>
             <div>
@@ -294,14 +295,14 @@
             <div>
                 <label for="comp " class="small-label ">Do you need a service?</label>
                 <fieldset>
-                    <select type="radio " name="grid " id="yes " value="yes ">
+                    <select type="radio " name="grid " id="service " value=" ">
                         <option id="yes " value="yes ">Yes</option>
                         <option id="no " value="no ">No</option>
                     </select>
                 </fieldset>
             </div>
             <div>
-                <label for="comp " class="small-label ">If yes, select a service</label>
+                <label for="comp " class="small-label " id="serviceName">If yes, select a service</label>
                 <select id="comp ">
                     <option>Web development</option>
                     <option>Tech consultancy</option>
@@ -312,10 +313,10 @@
             </div>
             <div class="full-width ">
                 <label for="message " class="large-label ">Your Message</label>
-                <textarea id="message " placeholder="Leave a message…"></textarea>
+                <textarea id="message" placeholder="Leave a message… "></textarea>
             </div>
-            <div class="full-width ">
-                <button class="button main w-button" type="submit ">Send Message</button>
+            <div text-center>
+                <button class="u mr-lg button " type="submit " value="Send message ">Send Message</button>
             </div>
         </form>
     </main>
@@ -394,6 +395,38 @@
             </div>
         </div>
     </div>
+    <script>
+        var thisForm = document.getElementById("contact");
+        const headers_ = {
+            'Authorization': 'Bearer <keygsagaBWhnmu35Z>',
+            'Content-Type': 'application/json'
+        };
+        // When the form is submitted...
+        thisForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+            // POST the data
+            axios.post( < https: //api.airtable.com/v0/appAmoubBHCzWt1rf/Contact%20Form > , 
+                    {
+                        "records": {
+                            "First Name": document.getElementById("firstName").value,
+                            "Last Name": document.getElementById("lastName").value,
+                            "Email Address": document.getElementById("email").value,
+                            "Phone number": document.getElementById("phone").value,
+                            "Need service": document.getElementById("service").value,
+                            "Name of service": document.getElementById("serviceName").value,
+                            "Message": document.getElementById("message").value
+                        }
+                    }, {
+                        headers: headers_
+                    })
+                .then((resp) => {
+                    console.log("success!")
+                })
+                .catch(function(error) {
+                    console.log(error);
+                });
+        });
+    </script>
     <script src="js/bootstrap.bundle.min.js "></script>
     <script src="js/form-validation.js "></script>
     <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js?site=5ea1b995c6b4c10f74406a08 " type="text/javascript " integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin=" anonymous ">
