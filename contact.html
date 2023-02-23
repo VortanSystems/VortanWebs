@@ -190,28 +190,26 @@
 <!-- Your Chat Plugin code -->
 <div id="fb-customer-chat " class="fb-customerchat ">
 </div>
-<script>
+<!-- 
+    <script>
     const handleSubmit = (event) => {
-        event.preventDefault();
-
-        const myForm = event.target;
-        const formData = new FormData(myForm);
-
-        fetch("https://vortansystems.netlify.app ", {
-                method: "POST ",
-                headers: {
-                    "Content-Type ": "application/x-www-form-urlencoded "
-                },
-                body: new URLSearchParams(formData).toString(),
-            })
-            .then(() => alert("Thank you for your message, we have received it and will be in touch shortly. "))
-            .catch((error) => alert(error));
-    };
-
-    document
-        .querySelector("form ")
-        .addEventListener("submit ", handleSubmit);
+            event.preventDefault();
+            const myForm = event.target;
+            const formData = new FormData(myForm);
+            fetch("https://vortansystems.netlify.app ", {
+                        method: "POST ",
+                        headers: {
+                            "Content-Type ": "application/x-www-form-urlencoded
+                            " }, body: new URLSearchParams(formData).toString(), }) .then(() => alert("
+                            Thank you
+                            for your message,
+                            we have received it and will be in touch shortly.
+                            ")) .catch((error) => alert(error)); }; document .querySelector("
+                            form ") .addEventListener("
+                            submit ", handleSubmit);
 </script>
+       -->
+
 
 <script>
     var chatbox = document.getElementById('fb-customer-chat');
@@ -276,7 +274,7 @@
     </div>
 
     <main>
-        <form name="contact " action="https://vortansystems.netlify.app " method="POST " sizes="(max-width: 479px) 93vw, (max-width: 767px) 94vw, 720px " data-w-id="a4177896-a5e5-6c6a-0980-01ce8ea2054a " data-netlify="true ">
+        <form name="contact " method="POST " sizes="(max-width: 479px) 93vw, (max-width: 767px) 94vw, 720px " data-w-id="a4177896-a5e5-6c6a-0980-01ce8ea2054a " data-netlify="true ">
             <div>
                 <label for="name " class="large-label ">Name:</label>
                 <label for="firstName " class="form-label ">First name</label>
